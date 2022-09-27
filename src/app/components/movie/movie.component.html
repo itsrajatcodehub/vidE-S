@@ -1,0 +1,82 @@
+<app-header></app-header>
+<div class="movie-container">
+    <!-- top -->
+    <div class="top">
+        <!-- top - left (1) -->
+        <div class="left">
+            <div class="name">{{movie?.name}}</div>
+            <div class="rating">
+                 &nbsp;&nbsp;
+                <!-- <span class="rating-value">{{movie.rating}}</span> --> 
+            </div>
+            <div class="cover">
+                <img [src] = "movie?.cover" alt="">
+            </div>
+        </div>
+        
+        <!-- top - right (2) -->
+        <div class="right">
+            <!-- div 1  -->
+            <div class="title">Rate this movie</div>
+            <div class="rating-form">
+                <div class="form-group">
+                    <label for="username">Name</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+
+                <!-- div 2 -->
+                <div class="form-group">
+                    <label for = "rating">Rating</label>
+                    <ngb-rating [(rate)] = "movie.rating">
+                        <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                        </ng-template>
+                    </ngb-rating>
+                </div>
+
+                <!-- div 3 -->
+                <div class="form-group">
+                    <label for="review">Review</label>
+                    <textarea name="review" rows="3" class="form-control"></textarea>
+                </div>
+
+                <!-- button  -->
+                <div class="btn-container">
+                    <button class="btn btn-dark">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom  -->
+    <div class="bottom">
+        <h4 class="title">Reviews</h4>
+        <div class="reviews" *ngIf = "movie?.reviews?.length > 0">
+            <div class="review" *ngFor = "let review of movie?.reviews">
+                <div class="review-details">
+                    <div class="review-left">
+                        <div class="author">{{review.author}}</div>
+                        <div class="author_dt">{{review.published_on | date : "dd-MMM-YYYY"}}</div>
+                    </div>
+
+                    <div class="review-right">
+                        <div class="rating">
+                                <!--  -->
+                                <ngb-rating [(rate)] = "movie.rating">
+                                    <ng-template let-fill="fill" let-index="index">
+                                      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                                    </ng-template>
+                                  </ngb-rating>                              
+                                <!--  -->
+                                <span class="rating-value">{{review.rating}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text"></div>
+            </div>
+        </div>
+        <div class="reviews">
+            <div class="no-reviews" *ngIf = "movie?.reviews?.length === 0">No Reviews Yet!</div>
+        </div>
+    </div>
+</div>

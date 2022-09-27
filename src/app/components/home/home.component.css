@@ -1,0 +1,168 @@
+.home-container{
+    display: flex;
+}
+
+.home-container .all-movies{
+    width: 75%;
+    min-height: calc(100vh - 80px);
+    border-radius: 1px solid #fdc827;
+    padding: 20px 40px;
+    font-family: 'Roboto',sans-serif;
+    /*  */
+    border-right: 5px solid #ff9900;
+    /*  */
+}
+
+/* PART 1 -TRENDING MOVIES */
+
+.home-container .all-movies .trending-movies .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.home-container .all-movies .trending-movies .top h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-left: 5px solid #ff9900;
+    padding-left: 10px;
+}
+
+.home-container .all-movies .trending-movies .top .view-all{
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.home-container .all-movies .trending-movies .movie-thumbnail{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.home-container .all-movies .trending-movies .movie-thumbnail .movie .cover img{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-container .all-movies .trending-movies .movie-thumbnail .movie .detail{
+    width: 180px;
+} 
+
+.home-container .all-movies .trending-movies .movie-thumbnail .movie .detail .name{
+    font-weight: bold;
+    height: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+
+/* PART 2 - THEATRE MOVIES */
+
+.home-container .all-movies .theatre-movies .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.home-container .all-movies .theatre-movies .top h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-left: 5px solid #ff9900;
+    padding-left: 10px;
+} 
+
+.home-container .all-movies .theatre-movies .top .view-all{
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.home-container .all-movies .theatre-movies .movie-thumbnail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-container .all-movies .theatre-movies .movie-thumbnail .movie .cover img{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-container .all-movies .theatre-movies .movie-thumbnail .movie .detail{
+    width: 180px;
+} 
+
+.home-container .all-movies .theatre-movies .movie-thumbnail .movie .detail .name{
+    font-weight: bold;
+    height: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+/* PART 3 POPULAR MOVIES  */
+
+.home-container .popular-movies h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-left: 5px solid #ff9900;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.home-container .popular-movies .movies{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-container .popular-movies .movies .name{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home-container .popular-movies .view-all{
+    color: #ff9900;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Rating CSS */
+.star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+  }
+  .filled {
+    color: #1e90ff;
+  }
+  .bad {
+    color: #deb0b0;
+  }
+  .filled.bad {
+    color: #ff1e1e;
+  }
+
+/* SECTION 2 START */
+.home-container .popular-movies{
+      width: 25%;
+      min-height: calc(100vh - 80px);
+      padding: 20px 40px;
+      font-family: 'Roboto',sans-serif;
+}
+  
+/* .home-container .popular-movies{ */
+      /* border: 5px solid red; */
+
+  /* SECTION 2 END */
+/* } */

@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class="home-container">
+    <!-- div 1 -->
+    <div class="all-movies">
+    <!-- part 1 TRENDING MOVIES-->
+    <div class="trending-movies">
+        <div class="top">
+            <h4>Trending Movies</h4>
+                <div class="view-all">View All</div>
+        </div>
+            
+    <div class="movie-thumbnail">
+        <div class="movie" *ngFor= "let movie of trendingMovies">
+            <div class="cover" (click) = "goToMovie('trending', movie.id)">
+                <img [src] = "movie.cover" alt="">
+            </div>
+        <div class="detail">
+            <div class="name" (click) = "goToMovie('trending', movie.id)">{{movie.name}}</div>
+                <div class="rating">
+                    <!--  -->
+                    <ngb-rating [(rate)] = "movie.rating">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                    </ng-template>
+                    </ngb-rating>                              
+                    <!--  -->
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+ 
+
+        <!-- part 2  THEATRE MOVIES-->
+        <div class="theatre-movies">
+            <div class="top">
+                <h4>Theatre Movies</h4>
+                <div class="view-all">View All</div>
+            </div>
+            
+            <div class="movie-thumbnail">
+                <div class="movie" *ngFor= "let movie of theatreMovies">
+                    <div class="cover" (click) = "goToMovie('theatre', movie.id)">
+                        <img [src] = "movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name">{{movie.name}}</div>
+                        <div class="rating">
+                            <!--  -->
+                            <ngb-rating [(rate)] = "movie.rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                  <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                                </ng-template>
+                              </ngb-rating>                              
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+        <!-- div 1 end  -->
+
+        
+        <!-- div 2 &&& part 3 POPULAR MOVIES  -->
+        
+        <div class="popular-movies">
+            <h4>Popular Movies</h4>
+                <div class="movies">
+                    <div class="movie" *ngFor = "let movie of popularMovies">
+                    
+                        <div class="name" (click) = "goToMovie('popular', movie.id)">{{movie.name}}</div>
+                        <div class="rating">
+                            <!--  -->
+                            <ngb-rating [(rate)] = "movie.rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                  <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                                </ng-template>
+                            </ngb-rating>
+                            <!--  -->
+                        </div>
+                </div>
+                <div class="view-all">View All</div>
+            </div>
+        </div>
+
+
+</div>

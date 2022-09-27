@@ -1,0 +1,47 @@
+<div class="login-container">
+    <img class="film" src="assets/img/film.png" alt="">
+    <div class="logo"> VidE'S ! </div>
+    <div class="desc">
+        "We provide what you want to see
+        <br> B'coz you will see what you want to see"
+    </div>
+
+    <!-- login form -->
+    <div class="login-form">    
+
+        <!-- field 1 -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" [(ngModel)] = "username">
+        </div>
+
+        <!-- field 2 -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" [(ngModel)] = "password">
+        </div>
+
+        <!-- button  -->
+        <div class="btn-container">
+            <div class="error"> {{ errorMsg }} </div>
+        <button class="btn btn-dark" (click)="login()">Login</button>
+        </div>
+    <!-- form end  -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
